@@ -13,23 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-   
-    $name = "Daniel Arruda";
-    $age = 19;
+use App\Http\Controllers\EventController;
 
-    $languages = ['PHP', 'JavaScript', 'MySQL'];
-    $companies = ['Fazer Comunicação', 'WR Infoteam', 'BS Tecnologia'];
-   
-    return view('welcome', 
-        [
-            'name' => $name, 
-            'age' => $age,
-            'languages' => $languages,
-            'companies' => $companies
-        ]
-    );
-});
+Route::get('/', [EventController::class, 'index']);
+Route::get('/events/create', [EventController::class, 'create']);
 
 Route::get('/produtos', function () {
 
