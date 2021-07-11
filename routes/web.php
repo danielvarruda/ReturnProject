@@ -29,5 +29,8 @@ Route::get('/', function () {
             'companies' => $companies
         ]
     );
+});
 
+Route::get('/produtos', function () {
+    return view('products');
 });
