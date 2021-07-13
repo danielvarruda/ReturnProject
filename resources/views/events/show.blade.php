@@ -4,9 +4,9 @@
 
 @section('content')
 
-<div class="col-md-10 off-set-md-1">
+<div class="col-md-10 offset-md-1">
     <div class="row">
-        <div class="image-container col-md-6">
+        <div id="image-container" class="col-md-6">
             <img src="/img/events/{{ $event->image ? $event->image : '../banner.jpeg' }}" class="img-fluid" alt="{{ $event->title }}">
         </div>
 
