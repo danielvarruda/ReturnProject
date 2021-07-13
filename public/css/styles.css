@@ -187,6 +187,10 @@ header {
   margin: 20px 0;
 }
 
+#description-container {
+  margin-top: 30px;
+}
+
 /* Items List */
 #items-list {
   list-style: none;
