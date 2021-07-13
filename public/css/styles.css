@@ -215,6 +215,12 @@ header {
   display: inline-block;
 }
 
+/* Edit page */
+.image-preview {
+  width: 100px;
+  margin-top: 20px;
+}
+
 /* Footer */
 footer {
   text-align: center;
