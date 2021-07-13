@@ -20,7 +20,7 @@
 
             <p class="events-participants">
                 <ion-icon name="people-outline"></ion-icon>
-                X Participantes
+                {{ count($event->users) }} Participantes
             </p>
 
             <p class="event-owner">
@@ -28,7 +28,10 @@
                 {{ $eventOwner['name'] }}
             </p>
 
-            <a href="#" class="btn btn-primary" id="event-submit">Confirmar presença</a>
+            <form action="/events/{{ $event->id }}/join" method="POST">
+                @csrf
+                <a href="/events/{{ $event->id }}/join" class="btn btn-primary" id="event-submit" onclick="event.preventDefault(); this.closest('form').submit()">Confirmar presença</a>
+            </form>
 
             <h3>O evento conta com: </h3>
             
