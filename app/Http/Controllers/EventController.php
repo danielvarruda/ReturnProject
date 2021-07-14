@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\EventRequest;
 
 use App\Models\Event;
 use App\Models\User;
@@ -28,7 +28,7 @@ class EventController extends Controller
         return view('events.create');
     }
 
-    public function store(Request $request) {
+    public function store(EventRequest $request) {
         $event = new Event;
 
         $event->title = $request->title;
